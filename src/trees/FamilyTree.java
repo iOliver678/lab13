@@ -135,7 +135,8 @@ public class FamilyTree
 		}
 		String parent = line.substring(0, colonIndex); /**The substring of line that starts at char #0 and ends just before colonIndex. Check the API for 
 				           class java.util.String, method substring(), if you need guidance.*/
-		String childrenString = line.substring(colonIndex, line.length()); /**The substring of line that starts just after colonIndex and goes through the end of
+		String childrenString = line.substring(colonIndex + 1);
+		 /**The substring of line that starts just after colonIndex and goes through the end of
 				                   the line. You'll use a different version of substring().*/
 		String[] childrenArray = childrenString.split(","); /**Call childrenString.split(). Check the API for details. The result will be an array
 				                    of strings, with the separating commas thrown away.*/
